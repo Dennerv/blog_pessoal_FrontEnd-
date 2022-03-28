@@ -1,6 +1,32 @@
+.caixa{
+    background-color: orangered;
+}
+
 .titulo{
-color: indianred;
+     color: white !important ;
+     font-weight: bold;
+}
+
+.botao{
+    border-color: white !important; 
+    background-color: #f84008 !important ; 
+    color: white !important;
+}
+
+.postagem{
+
+  background-color: white !important;
+
+}
+
+
+
+
+.cor{
+background-color:orange ;  
 text-align: center;
+
+
 }
 
 .imagem{
@@ -9,3 +35,7 @@ height: 500px;
 display: block;
 margin: 0 auto;
 }
+
+
+
+/*direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#3F51B5" }}*/
