@@ -7,6 +7,8 @@ import { Grid } from '@material-ui/core';
 import './App.css';
 import Home from './paginas/home/Home';
 import Login from './paginas/login/Login';
+import ListaPostagem from './components/postagens/listapostagem/ListaPostagem';
+import ListaTema from './components/temas/listatema/ListaTema';
 
 
 function App() {
@@ -30,6 +32,14 @@ function App() {
 
           <Route path='/cadastrousuario'>
             <CadastroUsuario />
+          </Route>
+
+          <Route path='/temas'>
+            <ListaTema />
+          </Route>
+
+          <Route path='/posts'>
+            <ListaPostagem />
           </Route>
 
         </div>
