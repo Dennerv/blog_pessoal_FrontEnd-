@@ -36,6 +36,10 @@ display: block;
 margin: 0 auto;
 }
 
+.text-decorator-none{
+  text-decoration: none;
+}
+
 
 
 /*direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#3F51B5" }}*/
