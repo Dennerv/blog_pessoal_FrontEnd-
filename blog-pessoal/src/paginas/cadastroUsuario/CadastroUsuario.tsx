@@ -47,6 +47,7 @@ import { cadastroUsuario } from '../../services/Service';
 import { Grid, Box, Typography, Button, TextField, FormControl, MenuItem, InputLabel, Select, FormHelperText } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
+import { toast } from 'react-toastify';
 
 function CadastroUsuario() {
 
@@ -95,17 +96,42 @@ function CadastroUsuario() {
 
             try {
                 cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-                alert('Usuario cadastrado com sucesso')
-
+                toast.success('Usuário cadastrado com sucesso', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                });
             } catch (error) {
                 console.log(`Error:${error}`)
 
-                alert("Usuário já existe")
-            }
+                toast.error('Usuário já existe', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                });      
+                  }
 
         } else {
-            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
-        }
+            toast.error('Dados inconsistentes. Por Favor, verivicar as informações de cadastro', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });        }
     }
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
